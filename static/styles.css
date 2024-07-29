@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styles */
+.title {
+    text-align: center;
+    color: #1e90ff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Search Form Styles */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1e90ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #4682b4;
+}
+
+/* Subtitle Styles */
+.subtitle {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Forecast List Styles */
+.forecast-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.forecast-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.forecast-item:hover {
+    background-color: #f9f9f9;
+}
+
+.date {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.weather-status {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.temperature, .humidity, .wind-speed, .pressure, .air-quality {
+    margin: 5px 0;
+}
+
+/* No Data Styles */
+.no-data {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}

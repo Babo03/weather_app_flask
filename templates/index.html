@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Weather Forecast</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">5-Day Weather Forecast</h1>
+        <form action="/" method="get" class="search-form">
+            <input type="text" name="city" placeholder="Enter city" value="{{ city }}" class="search-input">
+            <button type="submit" class="search-button">Get Weather</button>
+        </form>
+        
+        {% if data and 'list' in data %}
+            <h2 class="subtitle">Weather in {{ city }}</h2>
+            <ul class="forecast-list">
+                {% for item in data['list'] %}
+                    <li class="forecast-item">
+                        <div class="date">{{ item['dt_txt'] }}</div>
+                        <div class="weather-status">{{ item['weather'][0]['description'].title() }}</div>
+                        <div class="temperature">Temperature: {{ item['main']['temp'] }}°C</div>
+                        <div class="humidity">Humidity: {{ item['main']['humidity'] }}%</div>
+                        <div class="wind-speed">Wind Speed: {{ item['wind']['speed'] }} m/s</div>
+                        <div class="pressure">Pressure: {{ item['main']['pressure'] }} hPa</div>
+                        <div class="air-quality">Air Quality Index: {{ item['air_quality'] }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="no-data">No data available. Please enter a valid city.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
