@@ -10,28 +10,35 @@ This is a Flask-based web application that provides a 5-day weather forecast for
 - Dynamic city search
 - Responsive design with modern styling
 
-## Installation
+## Installation and usage
 
-1). **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/weather_app.git
-   cd weather_app
+1) Clone the repository:
+```bash
+git clone https://github.com/yourusername/weather_app.git
+cd weather_app
+```
 
-2). Create and activate a virtual environment:
+2) Create and activate a virtual environment:
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
 
-3). Install the dependencies:
+3) Install the dependencies:
+```bash
 pip install -r requirements.txt
+```
 
-4). Run the application:
+4) Run the application:
+```bash
 python app.py
+```
 
-5).Open the application in your browser:
+5) Open the application in your browser:
 Go to http://127.0.0.1:5000 to view the application.
 
-Contributing
+## Contributing
 Contributions are welcome! If you have any suggestions or improvements, please create an issue or submit a pull request.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
